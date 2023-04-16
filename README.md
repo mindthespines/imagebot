@@ -1,6 +1,5 @@
-# ts-node-bootstrap
-
-A template repository for Node TypeScript projects. Includes TypeScript, Jest for testing, Prettier for formatting, and ESLint for linting. Configures TS, Jest, and ESLint with sensible, basic defaults; does not modify Prettier's preset formatting opinions.
+# imagebot
+Rebeginning for an image-posting bot.
 
 ## Scripts
 
@@ -19,18 +18,5 @@ A template repository for Node TypeScript projects. Includes TypeScript, Jest fo
 
 ## Extra Bits
 
-Includes a GitHub Actions workflow to confirm the basics are working and some Dependabot configuation in the `.github` directory to try to keep this template up to date; you will likely want to delete or edit this directory to suit your own needs.
+Includes GitHub Actions workflows for testing and dependency updates
 
-## Resources
-
-Documentation for options you may want to change:
-
-- [`tsconfig` options](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
-- [Jest CLI options](https://jestjs.io/docs/cli)
-- [Prettier config](https://prettier.io/docs/en/configuration.html)
-- [`.gitignore`-ing more things](https://github.com/github/gitignore/blob/main/Node.gitignore)
-- [`concurrently` CLI options](https://www.npmjs.com/package/concurrently)
-- [`nodemon` CLI options](https://www.npmjs.com/package/nodemon)
-- The base ESLint config is from [this article](https://khalilstemmler.com/blogs/typescript/eslint-for-typescript/) about how to use ESLint with TypeScript
-- Official ESLint docs [here](https://eslint.org/docs/latest/)
-- And official `typescript-eslint` plugin docs [here](https://typescript-eslint.io/)
