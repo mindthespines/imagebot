@@ -2,12 +2,13 @@
   "name": "ts-node-bootstrap",
   "version": "1.0.0",
   "description": "A template repository for Node TypeScript projects",
-  "main": "dist/main.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "rimraf ./dist && tsc",
     "build:watch": "rimraf ./dist && tsc --watch --preserveWatchOutput",
-    "start": "node dist/main.js",
-    "start:watch": "nodemon dist/main.js",
+    "start": "node dist/index.js",
+    "start:watch": "nodemon dist/index.js",
+    "setup-db": "npm run build && node dist/lib/database/run-setup.js",
     "dev": "npm run build && npm run start",
     "dev:watch": "concurrently -c cyan,magenta \"npm run build:watch\" \"wait-on dist/main.js && npm run start:watch\"",
     "test": "jest --verbose",
@@ -28,8 +29,12 @@
   "license": "MIT",
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.2",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
     "@types/jest": "^29.2.4",
     "@types/node": "^18.15.11",
+    "@types/pg": "^8.6.6",
+    "@types/supertest": "^2.0.12",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
     "@typescript-eslint/parser": "^5.58.0",
     "concurrently": "^8.0.1",
@@ -38,10 +43,17 @@
     "nodemon": "^2.0.22",
     "prettier": "^2.8.7",
     "rimraf": "^5.0.0",
+    "supertest": "^6.3.3",
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
     "tslib": "^2.5.0",
     "typescript": "^5.0.4",
     "wait-on": "^7.0.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "pg": "^8.10.0"
   }
 }

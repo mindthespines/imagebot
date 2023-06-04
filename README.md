@@ -1,4 +1,5 @@
 # imagebot
+
 Rebeginning for an image-posting bot.
 
 ## Scripts
@@ -19,4 +20,3 @@ Rebeginning for an image-posting bot.
 ## Extra Bits
 
 Includes GitHub Actions workflows for testing and dependency updates
-
